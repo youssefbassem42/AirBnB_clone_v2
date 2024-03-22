@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" third task in Flask """
+""" fourth task in Flask """
 from flask import Flask
 
 
@@ -29,6 +29,12 @@ def c_is(text):
 def python_is(text="is cool"):
     """python is function to return txt to /python/txt"""
     return "Python {}".format(text.replace("_", " "))
+
+
+@app.route("/number/<n>", strict_slashes=False)
+def number_return(n):
+    """ return a number entered """
+    return "{} is a number".format(int(n))
 
 
 if __name__ == '__main__':
