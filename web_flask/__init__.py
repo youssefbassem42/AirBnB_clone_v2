@@ -4,8 +4,6 @@
 from flask import Flask
 
 
-
-
 def starting_point():
     app = Flask(__name__)
     return app
