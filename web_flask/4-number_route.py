@@ -34,7 +34,7 @@ def python_is(text="is cool"):
 @app.route("/number/<int:n>", strict_slashes=False)
 def number_return(n):
     """ return a number entered """
-    if isinstance(int, n):
+    if isinstance(n, int):
         return "{} is a number".format(n)
 
 
