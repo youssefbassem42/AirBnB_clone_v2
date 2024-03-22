@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" second task in Flask """
+""" zero task in Flask """
 from flask import Flask
 
 
@@ -9,6 +9,7 @@ app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def hello():
+    """ Hello function for Project"""
     return "Hello HBNB!"
 
 

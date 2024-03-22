@@ -8,10 +8,12 @@ app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def hello():
+    """ Hello function for Project"""
     return "Hello HBNB!"
 
 @app.route("/hbnb", strict_slashes=False)
-def HBNB():
+def hbnb():
+    """ Return a word to /hbnb"""
     return "HBNB"
 
 
