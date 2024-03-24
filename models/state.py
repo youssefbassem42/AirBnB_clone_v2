@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """ holds class State"""
-import models
-from models.base_model import BaseModel, Base
 from os import getenv
-import sqlalchemy
 from sqlalchemy import Column, String
 from sqlalchemy.orm import relationship
+from models.base_model import BaseModel, Base
+import models
+import sqlalchemy
 
 
 class State(BaseModel, Base):
@@ -14,7 +14,7 @@ class State(BaseModel, Base):
         __tablename__ = 'states'
         name = Column(String(128),
                       nullable=False)
-        cities = relationship("City", cascade="all, delete",
+        city = relationship("City", cascade="all, delete",
                               backref="states")
     else:
         name = ""
